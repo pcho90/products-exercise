@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './search.styles.css';
 
-const Search = ({ products, setProducts }) => {
+const Search = ({ products, setFiltered }) => {
   const [input, setInput] = useState('');
 
   const handleChange = e => {
@@ -10,7 +10,7 @@ const Search = ({ products, setProducts }) => {
     const filtered = products.filter(item =>
       item.name.includes(e.target.value)
     );
-    setProducts(filtered);
+    setFiltered(filtered);
   };
 
   return (

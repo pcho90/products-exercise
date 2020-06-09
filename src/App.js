@@ -15,6 +15,7 @@ import { Switch } from 'react-router-dom';
 
 const App = () => {
   const [products, setProducts] = useState(data);
+  const [filtered, setFiltered] = useState(data);
 
   return (
     <div className='app'>
@@ -29,7 +30,9 @@ const App = () => {
           <Route
             exact
             path='/products'
-            render={() => <Products {...{ products, setProducts }} />}
+            render={() => (
+              <Products {...{ products, setProducts, filtered, setFiltered }} />
+            )}
           />
           <Route
             exact

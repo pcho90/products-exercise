@@ -5,13 +5,13 @@ import './products.styles.css';
 import Search from '../../components/search/search.component';
 import Sort from '../../components/sort/sort.component';
 
-const Products = ({ products, setProducts }) => {
+const Products = ({ products, setProducts, filtered, setFiltered }) => {
   return (
     <div className='products'>
-      <Search {...{ products, setProducts }} />
+      <Search {...{ products, setFiltered }} />
       <Sort {...{ products, setProducts }} />
       <div className='products-body'>
-        {products.map(({ imgURL, name, price, _id }) => (
+        {filtered.map(({ imgURL, name, price, _id }) => (
           <Link to={`products/${_id}`} className='product'>
             <img className='product-image' src={imgURL} />
             <div className='product-name'>{name}</div>
