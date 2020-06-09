@@ -1,6 +1,6 @@
 .add-page {
-  width: 45vw;
-  margin: 0 auto;
+  width: 44vw;
+  margin: 30px auto;
 }
 
 .add-form {
@@ -42,10 +42,11 @@
 }
 
 .add-image {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .add-button {
+  margin-top: 24px;
   background: black;
   color: white;
   padding: 6px;
