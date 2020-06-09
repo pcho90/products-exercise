@@ -1,0 +1,45 @@
+.details {
+  width: 100%;
+}
+
+.detail {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 34px;
+}
+
+.detail-image {
+  width: 500px;
+  height: auto;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 0px 0px 44px;
+}
+
+.detail-name {
+  font-size: 4rem;
+}
+
+.detail-price {
+  font-size: 32px;
+  padding: 20px 0;
+}
+
+.description {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.6rem;
+}
+
+@media (max-width: 800px) {
+  .detail {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+  }
+}

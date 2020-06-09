@@ -1,0 +1,14 @@
+.sort {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 50px;
+}
+
+.select {
+  border: none;
+  font-size: 18px;
+}
