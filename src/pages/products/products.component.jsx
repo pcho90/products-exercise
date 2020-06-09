@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 import './products.styles.css';
 import Search from '../../components/search/search.component';
 import Sort from '../../components/sort/sort.component';
 
 const Products = ({ products, setProducts, filtered, setFiltered }) => {
+  useEffect(() => {
+    setFiltered(products);
+  }, [products]);
+
   return (
     <div className='products'>
       <Search {...{ products, setFiltered }} />

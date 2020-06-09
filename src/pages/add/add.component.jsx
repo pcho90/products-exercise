@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 import './add.styles.css';
 
@@ -10,7 +11,8 @@ const Add = ({ products, setProducts }) => {
     name: '',
     price: '',
     description: '',
-    image: ''
+    imgURL: '',
+    _id: uuidv4()
   });
 
   const handleChange = e => {
@@ -20,7 +22,7 @@ const Add = ({ products, setProducts }) => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    setProducts([...products, { ...input, _id: products.length }]);
+    setProducts([...products, input]);
     push('/products');
   };
 
@@ -51,7 +53,7 @@ const Add = ({ products, setProducts }) => {
         />
         <input
           type='text'
-          name='image'
+          name='imgURL'
           placeholder='Image Link'
           className='add-image'
           onChange={handleChange}

@@ -17,9 +17,9 @@ export const sort = (dir, products) => {
   let sorted = [...products];
   sorted.sort((a, b) => {
     let diff = 0;
-    if (a[val] > b[val]) {
+    if (+a[val] > +b[val]) {
       diff = -1;
-    } else if (a[val] < b[val]) {
+    } else if (+a[val] < +b[val]) {
       diff = 1;
     }
     return diff * order;
