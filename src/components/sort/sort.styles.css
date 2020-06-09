@@ -13,3 +13,7 @@
   font-size: 18px;
   margin-left: 12px;
 }
+
+.select:focus {
+  outline: none;
+}
