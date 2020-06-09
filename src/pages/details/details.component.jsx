@@ -1,22 +1,39 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-
-import products from '../../data/products.json';
+import { useParams, useHistory } from 'react-router-dom';
 
 import './details.styles.css';
 
-const Details = () => {
+const Details = ({ products, setProducts }) => {
   const { id } = useParams();
-  const product = products.find(item => item._id === id);
+  const product = products.find(item => item._id == id);
+  const { name, description, price, imgURL } = product;
+  const { push } = useHistory();
+
+  const handleDelete = () => {
+    setProducts(products.filter(item => item._id != id));
+    push('/products');
+  };
+
   return (
     <div className='details'>
       {product && (
         <div className='detail'>
-          <img src={product.imgURL} className='detail-image' />
+          <img src={imgURL} className='detail-image' />
           <div className='detail-content'>
-            <div className='detail-name'>{product.name}</div>
-            <div className='detail-price'>${product.price}</div>
-            <div className='description'>{product.description}</div>
+            <div className='detail-name'>{name}</div>
+            <div className='detail-price'>${price}</div>
+            <div className='description'>{description}</div>
+            <div className='detail-buttons'>
+              <button
+                className='detail-button'
+                onClick={() => push(`/products/${id}/edit`)}
+              >
+                Edit
+              </button>
+              <button className='detail-button' onClick={handleDelete}>
+                Delete
+              </button>
+            </div>
           </div>
         </div>
       )}

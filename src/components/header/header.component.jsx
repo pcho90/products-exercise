@@ -9,6 +9,14 @@ const Header = () => {
       <Link to='/' className='logo'>
         ProductsApp
       </Link>
+      <span className='nav-links'>
+        <Link to='/products' className='nav-link'>
+          Products
+        </Link>
+        <Link to='/add-product' className='nav-link'>
+          Add Product
+        </Link>
+      </span>
     </div>
   );
 };

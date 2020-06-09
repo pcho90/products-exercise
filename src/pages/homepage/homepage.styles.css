@@ -1,0 +1,13 @@
+.homepage {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.latest {
+  display: flex;
+  overflow: scroll;
+}

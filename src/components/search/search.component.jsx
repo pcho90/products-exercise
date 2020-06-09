@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
-import products from '../../data/products.json';
-
 import './search.styles.css';
 
-const Search = ({ setData }) => {
+const Search = ({ products, setProducts }) => {
   const [input, setInput] = useState('');
 
   const handleChange = e => {
@@ -12,7 +10,7 @@ const Search = ({ setData }) => {
     const filtered = products.filter(item =>
       item.name.includes(e.target.value)
     );
-    setData(filtered);
+    setProducts(filtered);
   };
 
   return (
