@@ -30,18 +30,19 @@
 
 .detail-price {
   font-size: 26px;
-  padding: 20px 0;
+  padding: 20px 4px;
 }
 
 .description {
   font-size: 16px;
   letter-spacing: 1px;
   line-height: 1.6rem;
+  padding: 0 4px;
 }
 
 .detail-buttons {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 70px;
   display: flex;
   justify-content: space-evenly;
 }
